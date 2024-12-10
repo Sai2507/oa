@@ -1,0 +1,759 @@
+
+/* Resetting default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Main body styling */
+body {
+  display: flex;
+  min-height: 100vh; /* Allow content to grow beyond the viewport height */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg,#000428,#004e92); /* Smooth gradient background */
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden; /* Prevents horizontal scrollbars */
+  scroll-behavior: smooth;
+}
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+  }
+/* Enable scrolling for the page */
+html,
+body {
+  overflow-y: auto; /* Allow vertical scrolling */
+  scroll-behavior: smooth;
+}
+
+
+/* Section Styles */
+section {
+  width: 90%; /* Full width of the content area */
+  max-width: 1200px; /* Limit the width for larger screens */
+  min-height: 80vh; /* Minimum height to avoid fixed height issues */
+  margin: 50px auto; /* Center the section and add margin between sections */
+  padding: 20px;
+  background-color: rgba(26, 35, 61, 0.8); /* Slight transparency */
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  section {
+    margin: 30px auto; /* Reduce margin for smaller screens */
+    padding: 15px; /* Adjust padding to fit smaller screen sizes */
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    margin: 20px auto; /* Further reduce margin for very small screens */
+    padding: 10px; /* Make padding compact for mobile screens */
+    border-radius: 5px; /* Slightly reduce the border radius */
+  }
+}
+
+/* Media query for extra small screens (320px and up) */
+@media (max-width: 320px) {
+  section {
+    margin: 15px auto; /* Minimal margin for very small screens */
+    padding: 10px; /* Compact padding for small space */
+    border-radius: 5px; /* Further reduce border radius */
+    font-size: 0.9rem; /* Decrease font size for better fit */
+  }
+}
+
+/* Content Styling */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; /* Default padding for larger screens */
+  margin-left: 0; /* Ensure no overlap with the sidebar */
+  z-index: 1;
+}
+
+/* Media query for medium screens (tablets) */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px 0; /* Adjust padding for medium screens */
+  }
+}
+
+/* Media query for small screens (smartphones) */
+@media (max-width: 480px) {
+  .content {
+    padding: 12px 0; /* Reduce padding for small screens */
+  }
+}
+
+/* Media query for extra small screens (320px and up) */
+@media (max-width: 320px) {
+  .content {
+    padding: 10px 0; /* Minimal padding for extra small screens */
+    font-size: 0.9rem; /* Reduce font size for better fit if needed */
+  }
+}
+
+
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #172039;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed; /* Keep the sidebar fixed while scrolling */
+    height: 100vh; /* Full height of the viewport */
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Styling the logo container */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+  }
+  
+  /* Logo image styles */
+  .sidebar-logo {
+    width: 60px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: makes the logo circular */
+  }
+  
+  /* Navigation styles inside sidebar */
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav .icon {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Add smooth hover */
+  }
+  
+  .nav .icon:hover {
+    background-color: #0f1426; /* Darker hover background */
+  }
+
+
+
+
+
+
+/* Centering content inside each section */
+.content section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* Main content styling */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px; /* Add padding to avoid overlap with sidebar */
+  z-index: 1;
+}
+
+/* Hero section styles */
+.hero {
+    background: none; /* Make the background transparent */
+    color: white; /* Keep text color white */
+    padding: 30px 0px;
+    text-align: center;
+    box-shadow: none;
+  }
+  
+  /* Button Styles */
+  .btn-register,
+  .btn-login {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .btn-register {
+    background-color: #51a351; /* Green color for register */
+  }
+  
+  .btn-login {
+    background-color: #9351ff; /* Purple color for login */
+  }
+  
+
+/* Header styling */
+header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Additional button styles for explore and get started */
+.btn-explore,
+.btn-started {
+  background-color: #4441e0;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-started {
+  background-color: #9351ff; /* Differentiate with purple */
+}
+
+.hero a {
+  text-decoration: none;
+  font-size: 60px;
+  color: #ffff;
+}
+
+.hero a:hover {
+  color: #9351ff;
+}
+
+.hero h1{
+    font-size: 41px;
+    margin-bottom: 100px;
+}
+
+/* Grid container and item styling */
+.grid-container {
+  background-color: none;
+  text-align: center;
+  height: 400px;
+  width: 500px;
+  background-color: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(13, 70px); /* 13 boxes per row */
+  grid-gap: 10px;
+  justify-content: center;
+  
+}
+
+/* Individual card styling */
+.grid span {
+  perspective: 600px; /* 3D perspective */
+}
+
+/* Card container */
+.grid .card {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  background-color: #000b2a;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, opacity 0.2s ease; /* Smooth transition for opacity and background */
+}
+
+/* Card faces */
+.grid .card .front,
+.grid .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+.grid .card .back {
+  transform: rotateY(180deg); /* Rotate back face by default */
+}
+
+/* Flip animation */
+.grid .card.is-flipping .front {
+  transform: rotateY(-180deg);
+}
+
+.grid .card.is-flipping .back {
+  transform: rotateY(0); /* Show the back */
+}
+
+/* Empty card styling */
+.grid .card.empty {
+  display: none; /* Keep the card displayed */
+  background-color: transparent; /* Set a background color for empty cards */
+  border-radius: 5px; /* Match with other cards */
+}
+
+/* Text handling for flipping cards */
+.grid .card span {
+  opacity: 1; /* Set opacity */
+  transition: opacity 0.2s ease;
+}
+
+.grid .card.is-flipping span {
+  transform: rotateX(90deg); /* Flip vertically */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Adjust the particle background */
+#dot-background {
+  position: fixed; /* Fix background in place, so it stays during scroll */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure it covers the full width of the viewport */
+  height: 100vh; /* Ensure it covers the full height of the viewport */
+  z-index: 0; /* Behind everything */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30px); /* Adjust to auto-fit */
+  grid-template-rows: repeat(auto-fit, 30px); /* Adjust to auto-fit */
+  justify-content: center; /* Center the dots horizontally */
+  align-content: center; /* Center the dots vertically */
+  pointer-events: none; /* Ignore clicks on the background */
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: blink 3s infinite ease-in-out, float 5s infinite ease-in-out;
+}
+
+/* Blink animation for dots */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Floating dots animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Floating up */
+  }
+  100% {
+    transform: translateY(0); /* Floating back down */
+  }
+}
+
+/* Basic styling for the carousel */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  width: 80%;
+  height: 80vh;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel-control:hover {
+  background-color: #9351ff;
+  color: #000000;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* Card container styling */
+/* Card container styling for responsiveness */
+
+/* General styles for the About section */
+.container {
+  text-align: left;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #C1C1C1;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #826EFF;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6B59CC;
+}
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+
+  .logo img {
+      width: 50px;
+  }
+}
+
+
+
+
+/* Responsive styles */
+@media (min-width: 576px) {
+  #about .section-title h3 {
+    font-size: 1.5em;
+  }
+
+  #about img {
+    max-width: 250px;
+  }
+
+  #about .about-para p {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 768px) {
+  #about {
+    padding: 40px;
+  }
+
+  #about .section-title h3 {
+    font-size: 1.8em;
+  }
+
+  #about img {
+    max-width: 30%;
+    margin: 20px;
+  }
+
+  #about .about-para {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  #about .about-para p {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  #about {
+    padding: 60px;
+  }
+
+  #about .section-title h3 {
+    font-size: 2em;
+  }
+
+  #about .about-para p {
+    font-size: 1.3em;
+  }
+}
+
+/* Individual card styling */
+/* Styling for the card container */
+.card-container {
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Wrap cards to the next line if they don't fit */
+  gap: 20px; /* Space between the cards */
+  justify-content: center; /* Center the cards horizontally */
+  padding: 20px; /* Add some padding around the container */
+  /* background-color: #000957;  */
+  border-radius: 30px; /* Optional background color */
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; /* Remove sidebar margin on smaller screens */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .sidebar {
+    width: 60px; /* Reduce sidebar width on small screens */
+  }
+}
+/* Styling for each card */
+.card {
+  display: block; /* Make the whole card clickable */
+  background-color: #00207e;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-decoration: none; /* Remove underline from text */
+  width: 300px; /* Fixed width for each card */
+  text-align: center;
+  margin: 0 auto; /* Center the card if necessary */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Card image styling */
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures the image covers the card without stretching */
+  border-bottom: 2px solid #4441e0;
+}
+
+/* Card content styling */
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+#contact {
+  width: 90%; /* Full width of the content area */
+  min-height: 25vh; /* Minimum height to avoid fixed height issues */
+  margin: 20px 0; /* Add margin between sections */
+  padding: 20px;
+  background-color: rgba(26, 35, 61, 0.8); /* Slight transparency */
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#login {
+  width: 50%; /* Full width of the content area */
+  min-height: 20vh; /* Minimum height to avoid fixed height issues */
+  margin: 20px 0; /* Add margin between sections */
+  padding: 20px;
+  background-color: rgba(26, 35, 61, 0.8); /* Slight transparency */
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: white;
+  z-index: 1100; /* Higher z-index to show on top */
+  cursor: pointer;
+}
+
+/* Sidebar styling for desktop */
+.sidebar {
+  background-color: #172039;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar hidden state for mobile view */
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* Media query to adjust layout for mobile screens */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger menu */
+  }
+
+  .sidebar {
+      width: 250px; /* Expand sidebar for mobile */
+      transform: translateX(-100%); /* Hide sidebar by default */
+  }
+
+  .sidebar.visible {
+      transform: translateX(0); /* Show sidebar when active */
+  }
+
+  .content {
+      margin-left: 0; /* Remove sidebar margin on smaller screens */
+      padding: 10px; /* Adjust content padding */
+  }
+}
+/* Hide the sidebar and show the menu button on mobile screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%); /* Move the sidebar out of view */
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Slide the sidebar into view when open */
+  }
+
+/* Hamburger menu button styles */
+.menu-toggle {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Styling for the hamburger lines */
+.menu-toggle .line {
+  display: block;
+  width: 30px; /* Adjust width to your preference */
+  height: 3px; /* Adjust height to your preference */
+  background-color: white;
+  margin: 6px 0; /* Spacing between lines */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Transform the lines to form an "X" when clicked */
+.menu-toggle.clicked .line1 {
+  transform: translateY(9px) rotate(45deg); /* Rotate the first line */
+}
+
+.menu-toggle.clicked .line2 {
+  opacity: 0; /* Hide the middle line */
+}
+
+.menu-toggle.clicked .line3 {
+  transform: translateY(-9px) rotate(-45deg); /* Rotate the last line */
+}
+
+
+
+
+/* Hide the menu button on larger screens */
+@media (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+}
+
+/* Sidebar animation */
+@media (max-width: 768px) {
+  .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+      transform: translateX(0);
+  }
+}
+
+}
